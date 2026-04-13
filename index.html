@@ -2,6 +2,296 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+    .navbar {
+    background-color: #0d2b45;
+    padding: 15px 0;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+
+  .btn {
+
+    font-weight: bold;
+
+    padding: 10px 18px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+  }
+
+  .book-btn {
+
+    background-color: #28c76f;
+
+    color: #fff;
+
+  }
+
+  .book-btn:hover {
+
+    background-color: #20a85c;
+
+  }
+
+  .primary-btn {
+
+    background-color: #28c76f;
+
+    color: #fff;
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+  }
+
+  .primary-btn:hover {
+
+    background-color: #20a85c;
+
+  }
+
+
+  .hero {
+
+    position: relative;
+
+    height: 90vh;
+
+    background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') no-repeat center center/cover;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+  }
+
+  /* Dark Overlay */
+
+  .overlay {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    top: 0;
+
+    left: 0;
+
+  }
+
+
+  .hero-content {
+
+    position: relative;
+
+    color: #fff;
+
+    max-width: 700px;
+
+    padding: 20px;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+  }
+
+  .hero-content p {
+
+    font-size: 16px;
+
+    opacity: 0.9;
+
+  }
+
+
+  @media (max-width: 768px) {
+
+    .hero-content h1 {
+
+      font-size: 28px;
+
+    }
+
+    .hero {
+
+      height: 70vh;
+
+    }
+
+    .logo {
+
+      font-size: 18px;
+
+    }
+    .affi-mob a{
+        width: 100%;
+    }
+    .affi-mob img{
+        width: 100%;
+    }
+    .affi-mob{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        height: 100vh;
+        background-color: #162047 !important;
+    }
+    .desktop-img{
+        display: none !important;
+    }
+
+  }
+
+
+  .services {
+
+    background: #dcdcdc;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+  }
+
+  .section-title {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    margin-bottom: 40px;
+
+    color: #333;
+
+  }
+
+  .service-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+  }
+
+  .service-card {
+
+    background: #ffff;
+
+    padding: 25px;
+
+    width: 300px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+
+  }
+
+  .service-card h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+    color: #0d2b45;
+
+  }
+
+  .service-card p {
+
+    font-size: 14px;
+
+    color: #444;
+
+  }
+
+
+  .service-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  }
+
+
+  .footer {
+
+    background: #0d2b45;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 15px 10px;
+
+    font-size: 14px;
+
+  }
+
+
+  @media (max-width: 768px) {
+
+    .service-card {
+
+      width: 100%;
+
+      max-width: 320px;
+
+    }
+
+    .section-title {
+
+      font-size: 24px;
+
+    }
+
+  }
     body{
         margin: 0;
         padding: 0;
@@ -21,29 +311,68 @@
         height: 100vh;
     }
     @media(max-width:762px){
-        .affi-mob img{
-            width: 100%;
+        .affi-desktop{
+            display: none;
         }
         .affi-mob{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            align-content: center;
-            height: 100vh;
-            background-color: #0d0000 !important;
-        }
-        .desktop-img{
-            display: none !important;
+            display: block;
         }
     }
 </style>
 </head>
 <body>
-    <div class="desktop-img">
-        <img src="cleaning service.png" alt="">
+<div class="affi-desktop">
+  
+  <header class="navbar">
+    <div class="container nav-flex">
+      <h2 class="logo">CleanPro Services</h2>
+      <a href="#" class="btn book-btn">Book Now</a>
     </div>
+  </header>
+  
+  
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Professional Cleaning Services</h1>
+      <p>Trusted home & office cleaning solutions at affordable prices.</p>
+      <a href="https://wa.me/918851521863" class="btn primary-btn">Get Instant Quote</a>
+    </div>
+  </section>
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      
+      <div class="service-wrapper">
+        
+        <div class="service-card">
+          <h3>Home Cleaning</h3>
+          <p>Deep cleaning for your home with professional equipment and trained staff.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Office Cleaning</h3>
+          <p>Keep your workspace clean and productive with our expert services.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Sofa & Carpet Cleaning</h3>
+          <p>Advanced stain removal and sanitization for long-lasting freshness.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  
+  <footer class="footer">
+    <p>© 2026 CleanPro Services | All Rights Reserved</p>
+  </footer>
+  
+</div>
     <div class="affi-mob">
         <a href="https://wa.me/918851521863"><img src="game-site2.jpeg" alt=""></a>
     </div>
+    
 </body>
 </html>
